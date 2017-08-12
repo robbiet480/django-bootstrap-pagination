@@ -9,8 +9,8 @@ from django.http import QueryDict
 from django.utils.html import mark_safe
 
 
-# As of django 1.10, template rendering no longer accepts a context, but 
-# instead accepts only accepts a dict. Up until django 1.8, a context was 
+# As of django 1.10, template rendering no longer accepts a context, but
+# instead accepts only accepts a dict. Up until django 1.8, a context was
 # actually required. Fortunately Context takes a single dict parameter,
 # so for django >=1.9 we can get away with just passing a unit function.
 if django.VERSION < (1, 9, 0):
@@ -133,7 +133,7 @@ class BootstrapPagerNode(Node):
         template = "bootstrap_pagination/pager-bs%i.html" % get_bootstrap_version()
 
         return get_template(template).render(
-            Context({
+            {
                 'page': page,
                 'previous_label': previous_label,
                 'next_label': next_label,
@@ -141,7 +141,7 @@ class BootstrapPagerNode(Node):
                 'next_title': next_title,
                 'previous_page_url': previous_page_url,
                 'next_page_url': next_page_url
-            }))
+            })
 
 
 class BootstrapPaginationNode(Node):
@@ -229,7 +229,7 @@ class BootstrapPaginationNode(Node):
                 index_range = "%s-%s" % (1 + (curpage - 1) * page.paginator.per_page, len(page.paginator.object_list), )
             else:
                 index_range = "%s-%s" % (1 + (curpage - 1) * page.paginator.per_page, curpage * page.paginator.per_page, )
-                
+
             url = get_page_url(curpage, get_current_app(context), url_view_name, url_extra_args, url_extra_kwargs, url_param_name, url_get_params, url_anchor)
             page_urls.append((curpage, index_range, url))
 
@@ -252,7 +252,7 @@ class BootstrapPaginationNode(Node):
         template = "bootstrap_pagination/pagination-bs%i.html" % get_bootstrap_version()
 
         return get_template(template).render(
-            Context({
+            {
                 'page': page,
                 'size': size,
                 'show_index_range': show_index_range,
@@ -267,7 +267,7 @@ class BootstrapPaginationNode(Node):
                 'last_page_url': last_page_url,
                 'previous_page_url': previous_page_url,
                 'next_page_url': next_page_url
-            }))
+            })
 
 
 @register.tag
