@@ -1,6 +1,6 @@
 [![Stories in Ready](https://badge.waffle.io/jmcclell/django-bootstrap-pagination.png?label=ready)](https://waffle.io/jmcclell/django-bootstrap-pagination)
-[![PyPi version](https://pypip.in/v/django-bootstrap-pagination/badge.png)](https://crate.io/packages/django-bootstrap-pagination/)
-[![PyPi downloads](https://pypip.in/d/django-bootstrap-pagination/badge.png)](https://crate.io/packages/django-bootstrap-pagination/)
+[![PyPi version](https://img.shields.io/pypi/v/django-bootstrap-pagination.svg)](https://pypi.python.org/pypi/django-bootstrap-pagination)
+[![PyPi downloads](https://img.shields.io/pypi/dm/django-bootstrap-pagination.svg)](https://pypi.python.org/pypi/django-bootstrap-pagination)
 [![Build Status](https://travis-ci.org/jmcclell/django-bootstrap-pagination.png?branch=master)](https://travis-ci.org/ondergetekende/django-bootstrap-pagination)
 
 
@@ -203,7 +203,3 @@ A somewhat more advanced usage might look like:
 ```
     {% bootstrap_pager page_obj previous_label="Newer Posts" next_label="Older Posts" url_view_name="post_archive_paginated" %}
 ```
-
-
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/jmcclell/django-bootstrap-pagination/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-
